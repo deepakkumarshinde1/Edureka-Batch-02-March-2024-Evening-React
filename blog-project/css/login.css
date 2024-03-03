@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+button,
+li,
+a {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+
+  /* background-color: red; */
+  /* background: linear-gradient(
+    90deg,
+    red 0% 20%,
+    blue 20% 40%,
+    yellow 40% 60%,
+    green 60% 100%
+  ); */
+  background-image: url(../images/bg-login.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.login-section {
+  background-color: white;
+  padding: 2rem;
+  width: 30%;
+  border-radius: 1rem;
+  margin-right: 10rem;
+}
+
+.login-section div {
+  display: flex;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+.login-section div > label {
+  border: 1px solid black;
+  padding: 0.4rem;
+}
+.login-section div > input {
+  border: 1px solid black;
+  border-radius: 0;
+  padding: 0.5rem;
+  width: 100%;
+  transition-property: width;
+  transition-duration: 0.5s;
+  outline: 0;
+}
+
+.login-section div > input:focus {
+  width: 100%;
+  background-color: rgb(8, 212, 8);
+  border-radius: 0;
+  border: 1px solid black;
+}
+
+.login-section div > label {
+  color: green;
+}
+
+.login-section .sign-in {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-section .sign-in > button {
+  margin-right: 0.5rem;
+  /* background-color: green; */
+  border: 2px solid green;
+  color: green;
+
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  font-weight: bold;
+
+  transition-property: background-color, color;
+  transition-duration: 0.2s;
+  border-radius: 0.25rem;
+}
+.login-section .sign-in > button:hover {
+  background-color: green;
+  color: white;
+}
+
+.login-section .sign-in > button:active {
+  background-color: rgb(3, 183, 3);
+  color: white;
+}
+
+.align-right {
+  text-align: center;
+}
+
+.login-section .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.fa-10rem {
+  font-size: 10rem;
+}
+
+.pop-registration {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.714);
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-registration {
+  width: 30%;
+
+  background-color: white;
+  padding: 2rem;
+}
+
+.user-registration div {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 10px;
+}
+
+.user-registration div > label {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.user-registration div > input {
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+}
+.user-registration div > input:focus {
+  border-bottom: 2px dashed green;
+}
+.btn {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 0;
+  cursor: pointer;
+  /* x-axis y-axis blur scale color */
+  transition-property: box-shadow;
+  transition-duration: 0.5s;
+}
+
+.btn-success {
+  box-shadow: 0 0 5px 0 green;
+}
+
+.btn-danger {
+  box-shadow: 0 0 5px 0 red;
+}
+
+.btn-success:hover {
+  box-shadow: 0 0 5px 2px green;
+}
+
+.btn-danger:hover {
+  box-shadow: 0 0 5px 2px red;
+}
+
+.d-none {
+  display: none !important;
+}

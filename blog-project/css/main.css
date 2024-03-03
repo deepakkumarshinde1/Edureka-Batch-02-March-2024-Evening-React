@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body,
+button,
+a,
+input,
+textarea {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+  padding: 0.5rem 6rem;
+  align-items: center;
+  box-shadow: 0 0.1rem 5px 0 gray;
+
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  border-bottom: 3px solid white;
+  cursor: pointer;
+}
+
+.menu > li:hover {
+  color: blue;
+  border-bottom: 3px solid blue;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: gray;
+}
+
+.write-btn {
+  border: none;
+  background-color: blue;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+}
+
+.blog-area {
+  margin: auto;
+  width: 60%;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 2rem;
+  box-shadow: 0 0rem 5px 0 gray;
+  border-radius: 20px;
+  align-items: center;
+  background-color: white;
+}
+
+.image-preview {
+  width: 20rem;
+  /* border: 1px solid black; */
+  box-shadow: 0 0rem 4px 0 gray;
+}
+
+.form-title {
+  font-weight: bold;
+}
+
+.main-form div {
+  margin: 1rem 0;
+  width: 25vw;
+  /* background-color: yellow; */
+  display: flex;
+}
+
+.main-form div .input {
+  width: 100%;
+  background-color: rgb(213, 212, 212);
+  border: 0;
+  outline: 0;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  resize: none;
+}
+.btn-save {
+  border: none;
+  padding: 0.5rem 2rem;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+}
+
+.blog-area-view {
+  margin: auto;
+  width: 60%;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem auto;
+  box-shadow: 0 0rem 5px 0 gray;
+  border-radius: 20px;
+  align-items: center;
+  overflow: hidden;
+  background-color: white;
+}
+.image-preview-view {
+  width: 20rem;
+  /* border: 1px solid black; */
+  box-shadow: 0 0rem 4px 0 gray;
+  height: 100%;
+}
+.blog-area-view-text {
+  width: 60%;
+  padding: 0 1rem;
+}
+.blog-area-view-text .title {
+}
+
+.blog-area-view-text .desc {
+  margin: 1rem 0;
+}
+.blog-area-view-text .author {
+  text-align: right;
+}
+
+.d-none {
+  display: none !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.remove-blog {
+  background-color: red;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.remove-blog:active {
+  box-shadow: 0 0 5px 2px red;
+}

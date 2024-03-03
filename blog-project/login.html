@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/login.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+  </head>
+  <body>
+    <main class="login-page">
+      <section class="login-section">
+        <p class="title">User Login</p>
+
+        <form action="">
+          <div>
+            <label for=""
+              ><i class="fa fa-user-secret" aria-hidden="true"></i
+            ></label>
+            <input
+              type="email"
+              id="lUserName"
+              name=""
+              placeholder="Enter UserName"
+            />
+          </div>
+          <div>
+            <label for=""><i class="fa fa-key" aria-hidden="true"></i></label>
+            <input
+              type="password"
+              id="lPassword"
+              name=""
+              placeholder="Enter Password"
+            />
+          </div>
+          <div class="sign-in">
+            <button type="button" id="signIn">
+              <i class="fa fa-sign-in" aria-hidden="true"></i> &nbsp;Login
+            </button>
+            <a href="/">Goto Home</a>
+          </div>
+          <div>
+            <p class="align-right">
+              Don't have account?
+              <a href="#" class="create-account">Create a new</a>
+            </p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <section class="pop-registration d-none">
+      <section class="user-registration">
+        <form action="#">
+          <div>
+            <label for="">Name</label>
+            <input type="text" id="fullName" placeholder="Enter FullName" />
+          </div>
+          <div>
+            <label for="">Email</label>
+            <input type="text" id="email" placeholder="Enter Email" />
+          </div>
+          <div>
+            <label for="">Mobile</label>
+            <input type="text" id="mobile" placeholder="Enter Mobile" />
+          </div>
+          <div>
+            <label for="">Password</label>
+            <input type="password" id="password" placeholder="Enter Password" />
+          </div>
+          <div>
+            <label for="">Confirm Password</label>
+            <input
+              type="text"
+              id="cpassword"
+              placeholder="Enter Confirm Password"
+            />
+          </div>
+          <div>
+            <button type="button" id="save" class="btn btn-success">
+              Save
+            </button>
+            <button type="button" class="cancel btn btn-danger">Cancel</button>
+          </div>
+        </form>
+      </section>
+    </section>
+    <script src="./js/common.js"></script>
+    <script src="./js/login.js"></script>
+  </body>
+</html>
