@@ -1,0 +1,12 @@
+ create a folder  api-server
+ npm init -y
+ npm i json-server
+ create db.json 
+    {
+        users:[],
+        blogs:[]
+    }
+
+ "start": "json-server --watch db.json --port 3004"
+
+ npm start 

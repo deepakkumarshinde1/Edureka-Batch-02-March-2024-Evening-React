@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import Counter from "./components/Counter";
 
+// function or a class
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1 className="text-red">Welcome to edureka react batch</h1>
+      <h1 className="text-danger text-center">Hi</h1>
+      <Counter />
+    </>
   );
 }
 
+// export
 export default App;
