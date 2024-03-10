@@ -10,7 +10,7 @@ function RegPopUp(props) {
     password: useRef(null),
     c_password: useRef(null),
   };
-  const saveUserData = () => {
+  const saveUserData = async () => {
     let _newUser = {
       name: newUser.name.current.value,
       email: newUser.email.current.value,
@@ -18,7 +18,22 @@ function RegPopUp(props) {
       password: newUser.password.current.value,
       c_password: newUser.c_password.current.value,
     };
-    console.log(_newUser);
+
+    // save data
+    let url = "http://localhost:3004/users";
+    let options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(_newUser),
+    };
+    // js Object to string
+    let response = await fetch(url, options); // function call
+    let data = await response.json();
+    if (data) {
+      alert("Registration Done Successfully");
+    }
   };
   //   console.log("Rendering");
   return (

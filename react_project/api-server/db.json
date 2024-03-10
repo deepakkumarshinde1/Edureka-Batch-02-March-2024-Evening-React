@@ -1,5 +1,38 @@
 {
-  "users": [],
+  "users": [
+    {
+      "id": "4c14",
+      "name": "suraj",
+      "email": "suraj@gmail.com",
+      "mobile": "9876543234",
+      "password": "abc",
+      "c_password": "abc"
+    },
+    {
+      "id": "a669",
+      "name": "suraj",
+      "email": "suraj@gmail.com",
+      "mobile": "9876543234",
+      "password": "abc",
+      "c_password": "abc"
+    },
+    {
+      "id": "f154",
+      "name": "suraj",
+      "email": "suraj@gmail.com",
+      "mobile": "9876543234",
+      "password": "abc",
+      "c_password": "abc"
+    },
+    {
+      "id": "256d",
+      "name": "suraj",
+      "email": "suraj@gmail.com",
+      "mobile": "9876543234",
+      "password": "abc",
+      "c_password": "abc"
+    }
+  ],
   "blogs": [],
   "cart": []
 }
