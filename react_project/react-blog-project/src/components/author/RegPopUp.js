@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import axios from "axios";
 
 function RegPopUp(props) {
   let { setShowPopUp } = props;
@@ -19,18 +20,11 @@ function RegPopUp(props) {
       c_password: newUser.c_password.current.value,
     };
 
+    delete _newUser.c_password;
     // save data
     let url = "http://localhost:3004/users";
-    let options = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(_newUser),
-    };
     // js Object to string
-    let response = await fetch(url, options); // function call
-    let data = await response.json();
+    let { data } = await axios.post(url, _newUser);
     if (data) {
       alert("Registration Done Successfully");
     }
