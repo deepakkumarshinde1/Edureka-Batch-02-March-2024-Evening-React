@@ -1,7 +1,14 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  makeUserRegistration,
+  userRegistrationUpdate,
+} from "../../redux/blog.slice";
 
 function RegPopUp(props) {
+  let dispatch = useDispatch();
+  let { isUserRegistered } = useSelector((state) => state.blog);
   let { setShowPopUp } = props;
   //   let [_name, setName] = useState("");
   let newUser = {
@@ -19,17 +26,18 @@ function RegPopUp(props) {
       password: newUser.password.current.value,
       c_password: newUser.c_password.current.value,
     };
-
-    delete _newUser.c_password;
-    // save data
-    let url = "http://localhost:3004/users";
-    // js Object to string
-    let { data } = await axios.post(url, _newUser);
-    if (data) {
-      alert("Registration Done Successfully");
-    }
+    dispatch(makeUserRegistration(_newUser));
   };
   //   console.log("Rendering");
+  useEffect(() => {
+    if (isUserRegistered.value !== null) {
+      alert(isUserRegistered.message);
+      if (isUserRegistered.value === true) {
+        setShowPopUp(null);
+      }
+      dispatch(userRegistrationUpdate(null));
+    }
+  }, [isUserRegistered]);
   return (
     <>
       <section className="pop-registration">

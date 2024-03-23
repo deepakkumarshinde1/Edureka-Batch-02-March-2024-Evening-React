@@ -6,6 +6,34 @@
       "email": "suraj@gmail.com",
       "mobile": "9876543234",
       "password": "abc"
+    },
+    {
+      "id": "392e",
+      "name": "Deepak",
+      "email": "deepak@gmail.com",
+      "mobile": "7867654345",
+      "password": "123"
+    },
+    {
+      "id": "977c",
+      "name": "deeepak",
+      "email": "deepak1@gmail.com",
+      "mobile": "8765432123",
+      "password": "123"
+    },
+    {
+      "id": "f178",
+      "name": "deepak",
+      "email": "deepak2@gmail.com",
+      "mobile": "9876543212",
+      "password": "123"
+    },
+    {
+      "id": "eefb",
+      "name": "Deepak",
+      "email": "deepak3@gmail.com",
+      "mobile": "8976543456",
+      "password": "123"
     }
   ],
   "blogs": [],

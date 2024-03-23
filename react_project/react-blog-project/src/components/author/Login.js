@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import RegPopUp from "./RegPopUp";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { saveLoginDetails } from "../../redux/blog.slice";
+import { makeUserLogin, saveLoginDetails } from "../../redux/blog.slice";
 
 function Login() {
   let dispatch = useDispatch();
@@ -14,28 +14,16 @@ function Login() {
     username: useRef(),
     password: useRef(),
   };
+
+  let makeLogin = async () => {
+    dispatch(makeUserLogin(loginUser));
+  };
+
   useEffect(() => {
     if (user !== null) {
       window.location.replace("/");
     }
   }, [user]);
-  let makeLogin = async () => {
-    try {
-      let userName = loginUser.username.current.value;
-      let password = loginUser.password.current.value;
-      let url = `http://localhost:3004/users?email=${userName}&password=${password}`;
-      let { data } = await axios.get(url);
-      if (data.length === 0) {
-        alert("Username or Password is wrong, Try Again.");
-      } else {
-        alert("Login Successfully");
-        dispatch(saveLoginDetails(data[0]));
-      }
-    } catch (error) {
-      console.log(error);
-      alert("Server Error");
-    }
-  };
   return (
     <>
       <main className="login-page">

@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../../redux/blog.slice";
+import { memo } from "react";
 
 function Header() {
   let dispatch = useDispatch();
@@ -54,4 +55,8 @@ function Header() {
   );
 }
 
-export default Header;
+export default memo(Header);
+
+// HOF (Higher Order Function)
+// Header --> pure component (rendered when  it's props change or it's internal state change)
+// memo == > HOC (Higher Order Component)
